@@ -1,4 +1,4 @@
-AppPenjualanMutiah::Application.routes.draw do
+ AppPenjualanMutiah::Application.routes.draw do
   resources :sales
 
   resources :products
@@ -22,7 +22,7 @@ AppPenjualanMutiah::Application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  # resources :products
 
   # Example resource route with options:
   #   resources :products do
