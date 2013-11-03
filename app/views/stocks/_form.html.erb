@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :product_id %><br>
-    <%= f.number_field :product_id %>
+    <%= f.select(:product_id, options_from_collection_for_select(@product, :id, :name), {prompt: 'Select Product' }) %>
   </div>
   <div class="field">
     <%= f.label :total %><br>

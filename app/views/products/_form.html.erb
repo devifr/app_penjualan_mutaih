@@ -21,7 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :category_id %><br>
-    <%= f.number_field :category_id %>
+    <%= f.select(:category_id, options_from_collection_for_select(@category, :id, :name), {prompt: 'Select Category' }) %>
+  </div>
+  <div class="field">
+    <%= f.label :price_purchase %><br>
+    <%= f.text_field :price_purchase %>
   </div>
   <div class="field">
     <%= f.label :price_normal %><br>

@@ -26,8 +26,4 @@ ga('create', 'UA-XXXX-Y', {
 ga('create', 'UA-44952970-1', {
   'cookieDomain': 'none' 
 });
-ga('send', 'pageview',{
-  'hitCallback': function() {
-    alert('analytics.js done sending data');
-  }
-});
+ga('send', 'pageview');

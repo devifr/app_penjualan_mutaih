@@ -15,10 +15,12 @@ class PurchasesController < ApplicationController
   # GET /purchases/new
   def new
     @purchase = Purchase.new
+    @product = Product.all
   end
 
   # GET /purchases/1/edit
   def edit
+    @product = Product.all
   end
 
   # POST /purchases

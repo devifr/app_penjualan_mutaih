@@ -15,10 +15,12 @@ class StocksController < ApplicationController
   # GET /stocks/new
   def new
     @stock = Stock.new
+    @product = Product.all
   end
 
   # GET /stocks/1/edit
   def edit
+    @product = Product.all
   end
 
   # POST /stocks

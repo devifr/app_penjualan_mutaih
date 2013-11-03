@@ -1,6 +1,6 @@
 <h1>Listing stocks</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Product</th>
@@ -14,7 +14,7 @@
   <tbody>
     <% @stocks.each do |stock| %>
       <tr>
-        <td><%= stock.product_id %></td>
+        <td><%= stock.product.name %></td>
         <td><%= stock.total %></td>
         <td><%= link_to 'Show', stock %></td>
         <td><%= link_to 'Edit', edit_stock_path(stock) %></td>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Stock', new_stock_path %>
+<%= link_to 'New Stock', new_stock_path, class: 'btn' %>

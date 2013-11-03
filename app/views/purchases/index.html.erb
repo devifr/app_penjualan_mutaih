@@ -1,6 +1,6 @@
 <h1>Listing purchases</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Product</th>
@@ -9,20 +9,18 @@
       <th>Date</th>
       <th></th>
       <th></th>
-      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @purchases.each do |purchase| %>
       <tr>
-        <td><%= purchase.product_id %></td>
+        <td><%= purchase.product.name %></td>
         <td><%= purchase.quantity %></td>
         <td><%= purchase.total %></td>
         <td><%= purchase.date %></td>
         <td><%= link_to 'Show', purchase %></td>
         <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
-        <td><%= link_to 'Destroy', purchase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Purchase', new_purchase_path %>
+<%= link_to 'New Purchase', new_purchase_path, class: 'btn' %>
