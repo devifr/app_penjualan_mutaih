@@ -1,29 +1,42 @@
 <p id="notice"><%= notice %></p>
+<table class="">
+  <tr>
+    <th colspan="2">Product Detail</th>
+  </tr>
+  <tr>
+    <td><%= image_tag @product.picture.url(:medium) %></td>
+    <td>
+      <p>
+        <strong>Name:</strong>
+        <%= @product.name %>
+      </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+      <p>
+        <strong>Name:</strong>
+        <%= @product.name %>
+      </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+      <p>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @product.category_id %>
-</p>
+      <p>
+        <strong>Category:</strong>
+        <%= @product.category_id %>
+      </p>
 
-<p>
-  <strong>Price normal:</strong>
-  <%= @product.price_normal %>
-</p>
+      <p>
+        <strong>Price normal:</strong>
+        <%= @product.price_normal %>
+      </p>
 
-<p>
-  <strong>Price reseller:</strong>
-  <%= @product.price_reseller %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+      <p>
+        <strong>Price reseller:</strong>
+        <%= @product.price_reseller %>
+      </p>
+    </td>
+  </tr>
+</table>
+<%= link_to 'Edit', edit_product_path(@product), class: 'btn' %> 
+<%= link_to 'Back', products_path, class: 'btn' %>

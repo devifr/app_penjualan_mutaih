@@ -15,6 +15,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'cocoon'
 gem 'kaminari'
 gem 'therubyracer', :platforms => :ruby
