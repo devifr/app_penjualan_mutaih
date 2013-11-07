@@ -4,6 +4,8 @@ class Product < ActiveRecord::Base
   has_many :sales
   has_one :stock
 
+  validate :category_id, presence: true
+
   after_save :add_product_in_stock
 
   has_attached_file :picture, 
